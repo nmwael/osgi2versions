@@ -12,5 +12,8 @@ http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/ja
             <ref component-id="htmlServer"/>
         </jaxrs:serviceBeans>
  </jaxrs:server>
-	<bean id="htmlServer" class="com.netdesign.osgi.examples.rest.endpoint.HtmlServer"/>
+	<bean id="htmlServer" class="com.netdesign.osgi.examples.rest.endpoint.HtmlServer">
+        <property name="messageProvider" ref="messageProvider" />
+    </bean>
+    <reference id="messageProvider" interface="com.netdesign.osgi.examples.rest.MessageProvider"></reference>
 </blueprint>
