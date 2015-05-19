@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.netdesign.osgi.examples.rest.MessageProvider;
+import com.netdesign.osgi.examples.rest.domain.MessageProvider;
 import com.netdesign.osgi.examples.rest.endpoint.domain.FancyClass;
 
 @Path("/rest")

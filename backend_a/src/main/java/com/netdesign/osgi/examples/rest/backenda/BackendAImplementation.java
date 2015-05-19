@@ -1,5 +1,5 @@
 package com.netdesign.osgi.examples.rest.backenda;
-import com.netdesign.osgi.examples.rest.MessageProvider;
+import com.netdesign.osgi.examples.rest.domain.MessageProvider;
 
 
 /**

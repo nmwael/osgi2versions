@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>rest-parent</artifactId>
+		<groupId>com.netdesign.osgi.examples.rest</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>com.netdesign.osgi.examples.rest.shared</groupId>
+
+	<artifactId>shared-domain</artifactId>
+	<packaging>bundle</packaging>
+
+	<name>REST OSGI Shared domain</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.5</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.5.3</version>
+				<extensions>true</extensions>
+				<executions>
+					<!-- This execution makes sure that the manifest is available when the 
+						tests are executed -->
+					<execution>
+						<goals>
+							<goal>manifest</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<instructions>
+						<Export-Package>com.netdesign.osgi.examples.rest.domain.*</Export-Package>
+						<Private-Package>com.netdesign.osgi.examples.rest.*</Private-Package>
+						<!-- <Bundle-Activator>com.netdesign.osgi.examples.rest.activator.Activator</Bundle-Activator> -->
+						<Import-Package> * </Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>
