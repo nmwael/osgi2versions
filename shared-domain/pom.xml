@@ -8,17 +8,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>webservice_rest_cxf</artifactId>
+    <artifactId>shared-domain</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
-    <name>REST CXF Frontend</name>
+    <name>REST Shared Domain</name>
 
-
-    <properties>
-        <exam.version>4.4.0</exam.version>
-        <url.version>2.4.0</url.version>
-        <cxf.version>3.0.4</cxf.version>
-    </properties>
     <build>
         <plugins>
             <plugin>
@@ -29,17 +24,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-            <version>${cxf.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.netdesign.osgi.examples.rest</groupId>
-            <artifactId>shared-domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>org.osgi</groupId>
@@ -47,6 +31,12 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.netdesign.osgi.examples.rest</groupId>-->
+            <!--<artifactId>shared-domain</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
